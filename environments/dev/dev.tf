@@ -10,7 +10,7 @@ terraform {
 }
 
 module "resource_group" {
-  source                   = "git::https://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@eysbp.visualstudio.com/ProjectTiger/_git/SLOAN_IAC_MODULES//resource_group?ref=develop"
+  source                   = "git::https://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@eysbp.visualstudio.com/ProjectTiger/_git/SLOAN_IAC_MODULES//resource_group?ref=develop"
   rg_array                 = var.rg_array
 }
 
