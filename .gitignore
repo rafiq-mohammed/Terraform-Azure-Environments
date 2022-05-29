@@ -1,0 +1,7 @@
+#All hidden files except gitignore
+.*
+!/.gitignore
+
+#TF state files
+*.tfstate
+*.tfstate.backup

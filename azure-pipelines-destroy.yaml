@@ -1,0 +1,32 @@
+trigger: none
+
+parameters:
+- name: env_name
+  displayName: Name of the environment
+  default: dev
+  values:
+  - dev
+
+pool:
+  vmImage: 'ubuntu-20.04'
+
+variables:
+  - group: tf-deployment-variables
+
+jobs:
+  - job:
+    displayName: Resources Provisioning
+
+    steps:
+    - script: |
+        echo '##vso[task.setvariable variable=ARM_CLIENT_ID]$(clientId)'
+        echo '##vso[task.setvariable variable=ARM_CLIENT_SECRET]$(clientSecret)'
+        echo '##vso[task.setvariable variable=ARM_TENANT_ID]$(tenantId)'
+        echo '##vso[task.setvariable variable=ARM_SUBSCRIPTION_ID]$(sid)'
+      displayName: Setting up Azure Account
+
+    - bash: |
+        cd environments/${{parameters.env_name}}
+        terraform init -backend-config="${{parameters.env_name}}-backend.tfvars"
+        terraform apply -var-file="${{parameters.env_name}}-variables.tfvars" -input=false -auto-approve
+      displayName: Terraform Apply to ${{ parameters.env_name }} Environment
