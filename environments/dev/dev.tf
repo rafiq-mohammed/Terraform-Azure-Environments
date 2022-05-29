@@ -10,7 +10,7 @@ terraform {
 }
 
 module "resource_group" {
-  source                   = "git::https://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@eysbp.visualstudio.com/ProjectTiger/_git/SLOAN_IAC_MODULES//resource_group?ref=develop"
+  source                   = "git::https://github.com/rafiq-mohammed/Terraform-Azure-Environments.git/Terraform-Azure-Modules//resource_group?ref=develop"
   rg_array                 = var.rg_array
 }
 
