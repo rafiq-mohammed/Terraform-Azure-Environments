@@ -11,7 +11,7 @@ terraform {
 
 module "resource_group" {
   #source                   = "git::https://github.com/rafiq-mohammed/Terraform-Azure-Environments.git/Terraform-Azure-Modules//resource_group?ref=develop"
-  source                   = "github.com/rafiq-mohammed/Terraform-Azure-Environments.git/Terraform-Azure-Modules//resource_group?ref=develop"
+  source                   = "github.com/rafiq-mohammed/Terraform-Azure-Modules.git//resource_group?ref=release/v1.0"
   rg_array                 = var.rg_array
 }
 
