@@ -2,7 +2,7 @@
 variable "rg_array" { 
     type = map 
 }
-/*
+
 variable "vnet_array" {
   type = map(object({
     location        = string
@@ -11,6 +11,7 @@ variable "vnet_array" {
   }))
 }
 
+/*
 variable "subnet_array" {
   type = map(object({
     address        = string

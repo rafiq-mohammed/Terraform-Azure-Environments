@@ -4,15 +4,16 @@ rg_array = {
   DEUSSVCRAFARG01 = "eastus" 
   DEUSSTRRAFARG01 = "eastus" 
 }
-/*
+
 vnet_array = {
-  teussvcslnavn01 = {
+  deussvcrafavn01 = {
     location       = "eastus"
-    address        = "10.1.0.0/16"
-    resource_group = "TEUSNETSLNARG01"
+    address        = "192.168.1.0/24"
+    resource_group = "DEUSNETRAFARG01"
   }
 }
 
+/*
 subnet_array = {
   teussvcslnasn01 = {
     address        = "10.1.1.0/24"
