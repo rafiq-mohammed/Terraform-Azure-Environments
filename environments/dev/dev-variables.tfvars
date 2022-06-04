@@ -8,25 +8,24 @@ rg_array = {
 vnet_array = {
   deussvcrafavn01 = {
     location       = "eastus"
-    address        = "192.168.1.0/24"
+    address        = "192.168.0.0/22"
     resource_group = "DEUSNETRAFARG01"
   }
 }
 
-/*
 subnet_array = {
   teussvcslnasn01 = {
-    address        = "10.1.1.0/24"
-    resource_group = "TEUSNETSLNARG01"
-    vnet_name      = "teussvcslnavn01"
+    address        = "192.168.1.0/24"
+    resource_group = "DEUSNETRAFARG01"
+    vnet_name      = "deussvcrafavn01"
   },
   teussvcslnasn02 = {
-    address        = "10.1.2.0/24"
-    resource_group = "TEUSNETSLNARG01"
-    vnet_name      = "teussvcslnavn01"
+    address        = "192.168.2.0/24"
+    resource_group = "DEUSNETRAFARG01"
+    vnet_name      = "deussvcrafavn01"
   }
 }
-
+/*
 nsg_array = {
   port8080 = {
     nsg_name                   = "teusnetslnnsg01"
