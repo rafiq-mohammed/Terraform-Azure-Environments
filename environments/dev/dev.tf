@@ -24,7 +24,7 @@ module "virtual_network" {
 }
 
 module "subnet" {
-  source                   = "github.com/rafiq-mohammed/Terraform-Azure-Modules.git//virtual_network?ref=release-1.0"
+  source                   = "github.com/rafiq-mohammed/Terraform-Azure-Modules.git//subnet?ref=release-1.0"
   subnet_array             = var.subnet_array
   subnet_depends_on        = [module.virtual_network]
 }
