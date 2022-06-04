@@ -18,7 +18,7 @@ variable "subnet_array" {
     vnet_name      = string
   }))
 }
-/*
+
 variable "nsg_array" {
   type = map(object({
     nsg_name                   = string
@@ -34,4 +34,3 @@ variable "nsg_array" {
     destination_address_prefix = string
   }))
 }
-*/

@@ -28,9 +28,9 @@ module "subnet" {
   subnet_array             = var.subnet_array
   subnet_depends_on        = [module.virtual_network]
 }
-/*
+
 module "network_security_group" {
-  source                   = "git::https://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@eysbp.visualstudio.com/ProjectTiger/_git/SLOAN_IAC_MODULES//network_security_group?ref=develop"
+  source                   = "github.com/rafiq-mohammed/Terraform-Azure-Modules.git//network_security_group?ref=release-1.0"
   nsg_array                = var.nsg_array
   nsg_depends_on           = [module.subnet]
 }
@@ -45,4 +45,3 @@ resource "azurerm_subnet_network_security_group_association" "nsg_subnet_assoc1"
  network_security_group_id  = module.network_security_group.nsg_ids[0]
  depends_on                 = [module.subnet, module.network_security_group]
 }
-*/

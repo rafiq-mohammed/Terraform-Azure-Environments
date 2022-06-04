@@ -25,12 +25,12 @@ subnet_array = {
     vnet_name      = "deussvcrafavn01"
   }
 }
-/*
+
 nsg_array = {
   port8080 = {
-    nsg_name                   = "teusnetslnnsg01"
+    nsg_name                   = "deusnetrafnsg01"
     location                   = "eastus"
-    resource_group_name        = "TEUSNETSLNARG01"
+    resource_group_name        = "dEUSNETRAFARG01"
     priority                   = "100"
     direction                  = "Inbound"
     access                     = "Allow"
@@ -41,9 +41,9 @@ nsg_array = {
     destination_address_prefix = "VirtualNetwork"
   },
   port2345 = {
-    nsg_name                   = "teusnetslnnsg01"
+    nsg_name                   = "deusnetrafnsg01"
     location                   = "eastus"
-    resource_group_name        = "TEUSNETSLNARG01"
+    resource_group_name        = "DEUSNETRAFARG01"
     priority                   = "200"
     direction                  = "Inbound"
     access                     = "Allow"
@@ -54,9 +54,9 @@ nsg_array = {
     destination_address_prefix = "VirtualNetwork"
   },
     port4567 = {
-    nsg_name                   = "teusnetslnnsg01"
+    nsg_name                   = "deusnetrafnsg01"
     location                   = "eastus"
-    resource_group_name        = "TEUSNETSLNARG01"
+    resource_group_name        = "DEUSNETRAFARG01"
     priority                   = "300"
     direction                  = "Inbound"
     access                     = "Allow"
@@ -67,4 +67,3 @@ nsg_array = {
     destination_address_prefix = "VirtualNetwork"
   }
 }
-*/
