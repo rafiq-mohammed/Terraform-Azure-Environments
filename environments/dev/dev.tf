@@ -22,13 +22,13 @@ module "virtual_network" {
   vnet_array               = var.vnet_array
   vnet_depends_on          = [module.resource_group]
 }
-/*
+
 module "subnet" {
-  source                   = "git::https://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@eysbp.visualstudio.com/ProjectTiger/_git/SLOAN_IAC_MODULES//subnet?ref=develop"
+  source                   = "github.com/rafiq-mohammed/Terraform-Azure-Modules.git//virtual_network?ref=release-1.0"
   subnet_array             = var.subnet_array
   subnet_depends_on        = [module.virtual_network]
 }
-
+/*
 module "network_security_group" {
   source                   = "git::https://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@eysbp.visualstudio.com/ProjectTiger/_git/SLOAN_IAC_MODULES//network_security_group?ref=develop"
   nsg_array                = var.nsg_array
