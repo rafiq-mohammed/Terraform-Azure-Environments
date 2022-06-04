@@ -18,7 +18,6 @@ module "resource_group" {
 
 
 module "virtual_network" {
-  source                   = "git::https://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@eysbp.visualstudio.com/ProjectTiger/_git/SLOAN_IAC_MODULES//virtual_network?ref=develop"
   source                   = "github.com/rafiq-mohammed/Terraform-Azure-Modules.git//virtual_network?ref=release-1.0"
   vnet_array               = var.vnet_array
   vnet_depends_on          = [module.resource_group]
