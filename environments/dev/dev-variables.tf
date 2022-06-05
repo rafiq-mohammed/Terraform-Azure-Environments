@@ -67,4 +67,3 @@ variable "cosmosdb_kind_mongo" {}
 variable "cosmosdb_kind_cassandra" {}
 variable "cosmosdb_automatic_failover" {}
 variable "consistency_level" {}
-variable "pep_subnet_id" {}
