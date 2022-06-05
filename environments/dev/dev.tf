@@ -72,3 +72,18 @@ module "pg" {
   psc_subresource_names                = var.psc_subresource_names
   #is_manual_connnection                = var.is_manual_connnection
 }
+
+## CosmosDB
+module "cosmosdb" {
+  source                               = "github.com/rafiq-mohammed/Terraform-Azure-Modules.git//cosmos_db?ref=release-1.0"
+  cassandradb_name                     = var.cassandradb_name
+  mongodb_name                         = var.mongodb_name
+  cosmosdb_rg_name                     = var.cosmosdb_rg_name
+  cosmosdb_location                    = var.cosmosdb_location
+  offer_type                           = var.offer_type
+  cosmosdb_kind_mongo                  = var.cosmosdb_kind_mongo
+  cosmosdb_kind_cassandra              = var.cosmosdb_kind_cassandra
+  cosmosdb_automatic_failover          = var.cosmosdb_automatic_failover
+  consistency_level                    = var.consistency_level
+  pep_subnet_id                        = module.subnet.subnet_ids[0]
+}

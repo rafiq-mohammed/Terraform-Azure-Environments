@@ -56,3 +56,15 @@ variable "psc_name" {}
 #variable "pep_subnet_id" {}
 variable "psc_subresource_names" {}
 #variable "is_manual_connection" {}
+
+### CosmosDB
+variable "cassandradb_name" {}
+variable "mongodb_name" {}
+variable "cosmosdb_rg_name" {}
+variable "cosmosdb_location" {}
+variable "offer_type" {}
+variable "cosmosdb_kind_mongo" {}
+variable "cosmosdb_kind_cassandra" {}
+variable "cosmosdb_automatic_failover" {}
+variable "consistency_level" {}
+variable "pep_subnet_id" {}
