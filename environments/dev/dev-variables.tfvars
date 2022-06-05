@@ -87,9 +87,9 @@ psc_name                             = "deussvcrafpgs01-psc"
 psc_subresource_names                = "postgresqlServer"
 
 ### CosmosDB
-cassandradb_name                     = "teussvcslncdb01"
-mongodb_name                         = "teussvcslncdb02"
-cosmosdb_rg_name                     = "TEUSSTRSLNARG01"
+cassandradb_name                     = "deussvcrafcdb01"
+mongodb_name                         = "deussvcrafcdb02"
+cosmosdb_rg_name                     = "DEUSSTRRAFARG01"
 cosmosdb_location                    = "eastus"
 offer_type                           = "Standard"
 cosmosdb_kind_mongo                  = "MongoDB"
