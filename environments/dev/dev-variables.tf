@@ -34,3 +34,24 @@ variable "nsg_array" {
     destination_address_prefix = string
   }))
 }
+
+### PostgresDB
+variable "pg_name" {}
+variable "location" {}
+variable "rg_name" {}
+variable "sku_name" {}
+variable "storage_mb" {}
+variable "backup_retention_days" {}
+variable "geo_redundant_backup" {}
+variable "administrator_login" {}
+variable "administrator_login_password" {}
+variable "version_pg" {}
+variable "ssl_enforcement" {}
+# azurerm_postgresql_virtual_network_rule
+variable "vnet_pg" {}
+variable "ignore_missing_vnet_service_endpoint" {}
+# Postgres_azurerm_private_endpoint
+variable "pep_name" {}
+variable "psc_name" {}
+variable "psc_subresource_names" {}
+#variable "is_manual_connection" {}

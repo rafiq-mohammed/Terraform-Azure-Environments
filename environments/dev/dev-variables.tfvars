@@ -67,3 +67,22 @@ nsg_array = {
     destination_address_prefix = "VirtualNetwork"
   }
 }
+
+### PostgresDB 
+pg_name                              = "deussvcrafapg01"
+location                             = "eastus"
+rg_name                              = "DEUSSTRRAFARG01"
+sku_name                             = "GP_Gen5_2"
+storage_mb                           = 5120
+backup_retention_days                = 7
+geo_redundant_backup                 = "Disabled"
+administrator_login                  = "postgres_admin"
+administrator_login_password         = "Pgpasswd09)"
+version_pg                           = "11"
+ssl_enforcement                      = "Enabled"
+vnet_pg                              = "deussvcrafapg01-vnet"
+ignore_missing_vnet_service_endpoint = true
+pep_name                             = "deussvcrafapg01-pep"
+psc_name                             = "deussvcrafpgs01-psc"
+psc_subresource_names                = "postgresqlServer"
+#is_manual_connnection               = false

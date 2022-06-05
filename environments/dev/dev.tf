@@ -35,6 +35,7 @@ module "network_security_group" {
   nsg_depends_on           = [module.subnet]
 }
 
+# Subnet association to NSG
 resource "azurerm_subnet_network_security_group_association" "nsg_subnet_assoc" {
  subnet_id                  = module.subnet.subnet_ids[0]
  network_security_group_id  = module.network_security_group.nsg_ids[0]
@@ -44,4 +45,29 @@ resource "azurerm_subnet_network_security_group_association" "nsg_subnet_assoc1"
  subnet_id                  = module.subnet.subnet_ids[1]
  network_security_group_id  = module.network_security_group.nsg_ids[0]
  depends_on                 = [module.subnet, module.network_security_group]
+}
+
+## PostgresDB
+module "pg" {
+  source                               = "github.com/rafiq-mohammed/Terraform-Azure-Modules.git//postgres?ref=release-1.0"
+  pg_name                              = var.pg_name
+  location                             = var.location
+  #rg_name                              = data.terraform_remote_state.network.outputs.rg_names[0]
+  rg_name                              = module.resource_group.rg_names[0]
+  sku_name                             = var.sku_name
+  storage_mb                           = var.storage_mb
+  backup_retention_days                = var.backup_retention_days
+  geo_redundant_backup                 = var.geo_redundant_backup
+  administrator_login                  = var.administrator_login
+  administrator_login_password         = var.administrator_login_password
+  version_pg                           = var.version_pg
+  ssl_enforcement                      = var.ssl_enforcement
+  vnet_pg                              = var.vnet_pg
+  vnet_subnet_id                       = data.terraform_remote_state.network.outputs.subnet_ids[0]
+  ignore_missing_vnet_service_endpoint = var.ignore_missing_vnet_service_endpoint
+  pep_name                             = var.pep_name         
+  pep_subnet_id                        = var.pep_subnet_id
+  psc_name                             = var.psc_name
+  psc_subresource_names                = var.psc_subresource_names
+  #is_manual_connnection                = var.is_manual_connnection
 }
