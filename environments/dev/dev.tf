@@ -63,7 +63,8 @@ module "pg" {
   version_pg                           = var.version_pg
   ssl_enforcement                      = var.ssl_enforcement
   vnet_pg                              = var.vnet_pg
-  vnet_subnet_id                       = data.terraform_remote_state.network.outputs.subnet_ids[0]
+  #vnet_subnet_id                       = data.terraform_remote_state.network.outputs.subnet_ids[0]
+  vnet_subnet_id                       = module.subnet.subnet_ids[0]
   ignore_missing_vnet_service_endpoint = var.ignore_missing_vnet_service_endpoint
   pep_name                             = var.pep_name         
   pep_subnet_id                        = var.pep_subnet_id
