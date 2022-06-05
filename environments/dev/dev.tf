@@ -67,7 +67,7 @@ module "pg" {
   vnet_subnet_id                       = module.subnet.subnet_ids[0]
   ignore_missing_vnet_service_endpoint = var.ignore_missing_vnet_service_endpoint
   pep_name                             = var.pep_name         
-  pep_subnet_id                        = var.pep_subnet_id
+  pep_subnet_id                        = module.subnet.subnet_ids[0]
   psc_name                             = var.psc_name
   psc_subresource_names                = var.psc_subresource_names
   #is_manual_connnection                = var.is_manual_connnection
