@@ -8,14 +8,16 @@ parameters:
   - dev
 
 pool:
-  vmImage: 'ubuntu-20.04'
+  #vmImage: 'ubuntu-20.04'
+  name: 'VM-Agents'
+
 
 variables:
   - group: tf-deployment-variables
 
 jobs:
   - job:
-    displayName: Resources De-provisioning
+    displayName: Resources Unprovisioning
 
     steps:
     - script: |
