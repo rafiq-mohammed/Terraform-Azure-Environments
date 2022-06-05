@@ -86,3 +86,4 @@ pep_name                             = "deussvcrafapg01-pep"
 psc_name                             = "deussvcrafpgs01-psc"
 psc_subresource_names                = "postgresqlServer"
 #is_manual_connnection               = false
+pep_subnet_id                        = "/subscriptions/36250773-cb2d-46cf-8c5e-b6664e69dd5a/resourceGroups/DEUSNETRAFARG01/providers/Microsoft.Network/virtualNetworks/deussvcrafavn01/subnets/deussvcrafasn01"

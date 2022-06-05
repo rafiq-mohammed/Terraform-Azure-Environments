@@ -53,5 +53,6 @@ variable "ignore_missing_vnet_service_endpoint" {}
 # Postgres_azurerm_private_endpoint
 variable "pep_name" {}
 variable "psc_name" {}
+variable "pep_subnet_id" {}
 variable "psc_subresource_names" {}
 #variable "is_manual_connection" {}
